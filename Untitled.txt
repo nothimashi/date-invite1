@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Date Invite 💌</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1b1f3b, #2a2f5f);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+.card {
+  max-width: 520px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.hero {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+p {
+  opacity: 0.85;
+  font-size: 14.5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.yes {
+  background: #ffd6e7;
+  color: #2a1b2e;
+}
+
+.no {
+  background: #ffb4b4;
+  color: #2a1b2e;
+}
+
+.details {
+  display: none;
+  margin-top: 18px;
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-box {
+  background: rgba(0,0,0,0.25);
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.detail-box img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <!-- Cute heart image -->
+  <img class="hero" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80">
+
+  <h1 id="question">Are you able to come on a date with your beloved girlfriend? 💌</h1>
+  <p id="subtext">Answer wisely…</p>
+
+  <div class="buttons" id="choices">
+    <button class="yes" onclick="yes()">Yes 💗</button>
+    <button class="no" onclick="no()">No 🙃</button>
+  </div>
+
+  <div class="details" id="details">
+    <h1>He said YES 🥹💗</h1>
+
+    <div class="detail-box">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
+      <strong>When</strong><br>
+      10–11 January
+    </div>
+
+    <div class="detail-box">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80">
+      <strong>Where</strong><br>
+      Premier Inn Harrow
+    </div>
+
+    <div class="detail-box">
+      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=900&q=80">
+      <strong>What we’re doing</strong><br>
+      Murder Mystery Night 🔎🕯️
+    </div>
+  </div>
+</div>
+
+<script>
+function yes() {
+  document.getElementById("choices").style.display = "none";
+  document.getElementById("details").style.display = "block";
+  document.getElementById("question").innerText = "Best answer 💗";
+  document.getElementById("subtext").innerText = "I knew you’d say yes.";
+}
+
+function no() {
+  alert("Wrong answer. Try again 😭💔");
+}
+</script>
+
+</body>
+</html>
